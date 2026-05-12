@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayna Terapisti | Hasta Paneli</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Arka plan desenleri */
+        .bg-grid-blue-500 { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(59 130 246 / 0.08)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e"); }
+    </style>
+</head>
+<body class="bg-blue-50 text-slate-800 antialiased min-h-screen flex flex-col relative">
+
+    <div class="fixed inset-0 bg-grid-blue-500 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
+    <div class="fixed top-0 right-0 w-96 h-96 bg-blue-300 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 opacity-20 -z-10"></div>
+    <div class="fixed bottom-0 left-0 w-96 h-96 bg-indigo-300 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 opacity-20 -z-10"></div>
+
+    <nav class="bg-white/80 backdrop-blur-md border-b border-blue-100 py-4 px-6 md:px-12 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2 text-blue-700 font-black text-xl tracking-tight">
+                <i class="fas fa-pulse"></i>
+                <span>Ayna Terapisti</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="text-right hidden sm:block">
+                    <div class="text-sm font-bold text-slate-900">Yusuf Cemal DURMUŞ</div>
+                    <div class="text-xs text-blue-600 font-medium bg-blue-50 px-2 py-0.5 rounded-full inline-block">Hasta</div>
+                </div>
+                <a href="profılsayfası.html" class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-blue-200 border-2 border-white hover:scale-105 transition">
+                    YCD
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 py-10 w-full">
+
+        <div class="mb-10">
+            <h1 class="text-3xl font-bold text-slate-900 mb-2">Hoş geldin, Yusuf Cemal 👋</h1>
+            <p class="text-slate-500 mb-6">Tedavi sürecin harika gidiyor. Bugünkü hedeflerine odaklanalım.</p>
+            
+            <div class="bg-white p-4 rounded-2xl border border-blue-100 shadow-sm">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-sm font-bold text-slate-700">Günlük Tamamlama</span>
+                    <span class="text-sm font-bold text-blue-600">%25</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-500 to-indigo-500 h-3 rounded-full w-1/4 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div class="bg-white p-5 rounded-2xl border border-blue-50 shadow-sm hover:shadow-md transition group">
+                <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-3 group-hover:bg-purple-600 group-hover:text-white transition">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="text-slate-400 text-xs font-bold uppercase tracking-wide">Tamamlanan</div>
+                <div class="text-slate-900 font-black text-2xl mt-1">1/4</div>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-blue-50 shadow-sm hover:shadow-md transition group">
+                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="text-slate-400 text-xs font-bold uppercase tracking-wide">Seri</div>
+                <div class="text-slate-900 font-black text-2xl mt-1">5 Gün</div>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-blue-50 shadow-sm hover:shadow-md transition group">
+                <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-3 group-hover:bg-green-600 group-hover:text-white transition">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="text-slate-400 text-xs font-bold uppercase tracking-wide">Süre</div>
+                <div class="text-slate-900 font-black text-2xl mt-1">45 dk</div>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-blue-50 shadow-sm hover:shadow-md transition group">
+                <div class="w-10 h-10 bg-orange-50 text-orange-600 rounded-lg flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="text-slate-400 text-xs font-bold uppercase tracking-wide">İlerleme</div>
+                <div class="text-slate-900 font-black text-2xl mt-1">%25</div>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i class="far fa-calendar-check text-blue-600"></i>
+                Bugünkü Görevlerin
+            </h2>
+
+            <div class="space-y-4">
+                
+                <div class="bg-white p-6 rounded-3xl border border-blue-100 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-blue-600"></div> <div class="flex items-center gap-4 w-full">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl shrink-0">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-bold text-slate-900 text-lg">Diz Bükme (Sol)</h3>
+                                <span class="bg-indigo-100 text-indigo-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase"><i class="fas fa-robot mr-1"></i> AI Destekli</span>
+                            </div>
+                            <div class="flex items-center gap-4 mt-1 text-sm text-slate-500">
+                                <span><i class="fas fa-layer-group text-blue-400 mr-1"></i> 3 Set</span>
+                                <span><i class="fas fa-redo text-blue-400 mr-1"></i> 10 Tekrar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="egzersız.html" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-blue-200 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap">
+                        <i class="fas fa-play"></i> BAŞLA
+                    </a>
+                </div> 
+
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6 opacity-75">
+                    <div class="flex items-center gap-4 w-full">
+                        <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl shrink-0">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-bold text-slate-700 text-lg line-through decoration-slate-400">Bacak Kaldırma (Sağ)</h3>
+                            </div>
+                            <div class="flex items-center gap-4 mt-1 text-sm text-slate-500">
+                                <span><i class="fas fa-layer-group mr-1"></i> 3 Set</span>
+                                <span><i class="fas fa-redo mr-1"></i> 12 Tekrar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full md:w-auto bg-white border border-green-200 text-green-600 font-bold px-8 py-3 rounded-xl cursor-default flex items-center justify-center gap-2">
+                        <i class="fas fa-check-circle"></i> Tamamlandı
+                    </button>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-blue-100 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-blue-600"></div>
+                    
+                    <div class="flex items-center gap-4 w-full">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl shrink-0">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-bold text-slate-900 text-lg">Kol Germe (Her İki)</h3>
+                                <span class="bg-indigo-100 text-indigo-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase"><i class="fas fa-robot mr-1"></i> AI Destekli</span>
+                            </div>
+                            <div class="flex items-center gap-4 mt-1 text-sm text-slate-500">
+                                <span><i class="fas fa-layer-group text-blue-400 mr-1"></i> 2 Set</span>
+                                <span><i class="fas fa-redo text-blue-400 mr-1"></i> 15 Tekrar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="egzersız.html" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-blue-200 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap">
+                        <i class="fas fa-play"></i> BAŞLA
+                    </a>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-blue-100 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-blue-600"></div>
+                    
+                    <div class="flex items-center gap-4 w-full">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl shrink-0">
+                            <i class="fas fa-arrows-spin"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-bold text-slate-900 text-lg">Omuz Rotasyonu</h3>
+                                <span class="bg-indigo-100 text-indigo-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase"><i class="fas fa-robot mr-1"></i> AI Destekli</span>
+                            </div>
+                            <div class="flex items-center gap-4 mt-1 text-sm text-slate-500">
+                                <span><i class="fas fa-layer-group text-blue-400 mr-1"></i> 3 Set</span>
+                                <span><i class="fas fa-redo text-blue-400 mr-1"></i> 8 Tekrar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="egzersız.html" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-blue-200 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap">
+                        <i class="fas fa-play"></i> BAŞLA
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="#" class="bg-white p-6 rounded-3xl border border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all group flex items-start gap-4">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 group-hover:text-blue-600 transition">Detaylı İlerleme Raporu</h4>
+                    <p class="text-sm text-slate-500 mt-1">Geçmiş antrenmanlarınızı ve gelişim grafiklerinizi inceleyin.</p>
+                </div>
+            </a>
+
+            <a href="chat.html" class="bg-white p-6 rounded-3xl border border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all group flex items-start gap-4">
+                <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                    <i class="fas fa-comment-medical"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 group-hover:text-indigo-600 transition">Terapistle İletişim</h4>
+                    <p class="text-sm text-slate-500 mt-1">Soru sormak veya randevu almak için uzmanınıza yazın.</p>
+                </div>
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="text-center py-6 mt-10 text-slate-400 text-xs">
+        <p>&copy; 2025 Ayna Terapisti. Bir Teknofest Projesidir.</p>
+    </footer>
+
+</body>
+</html>

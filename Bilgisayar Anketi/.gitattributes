@@ -1,0 +1,6 @@
+# GitHub'da dil istatistiklerinde Python'ın öne çıkması için diğer dosyaları istatistiklerden gizliyoruz.
+# Bu işlem yalnızca depo dil istatistiklerini etkiler, dosyaların düzgün görünmesini bozmaz.
+
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.js linguist-detectable=false

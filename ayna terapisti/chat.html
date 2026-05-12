@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayna Terapisti | Doktoruna Danış</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Arka plan desenleri */
+        .bg-grid-blue-500 { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(59 130 246 / 0.08)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e"); }
+
+        /* Scrollbar Gizleme/Güzelleştirme */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-blue-50 text-slate-800 antialiased h-screen flex flex-col relative overflow-hidden">
+
+    <div class="fixed inset-0 bg-grid-blue-500 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
+    <div class="fixed top-0 left-0 w-96 h-96 bg-blue-300 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-20 -z-10"></div>
+    <div class="fixed bottom-0 right-0 w-96 h-96 bg-indigo-300 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 opacity-20 -z-10"></div>
+
+    <header class="bg-white/90 backdrop-blur-md border-b border-blue-100 px-6 py-4 flex justify-between items-center shadow-sm z-50">
+        <div class="flex items-center gap-4">
+            <div class="relative">
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md ring-2 ring-white">
+                    SO
+                </div>
+                <div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full">
+                    <div class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></div>
+                </div>
+            </div>
+            
+            <div>
+                <h1 class="text-sm font-bold text-slate-900 leading-tight">ORD. PROF. DR. SAFA OMAÇ</h1>
+                <div class="flex items-center gap-1.5 mt-0.5">
+                    <span class="text-xs text-green-600 font-medium bg-green-50 px-2 py-0.5 rounded-full">Çevrimiçi</span>
+                    <span class="text-[10px] text-slate-400">• Fizik Tedavi Uzmanı</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="hastapanelı.html" class="text-slate-500 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-xl transition text-sm font-medium flex items-center gap-2">
+            <i class="fas fa-arrow-left"></i> <span class="hidden sm:inline">Panele Dön</span>
+        </a>
+    </header>
+
+    <main id="chat-window" class="flex-1 overflow-y-auto p-6 space-y-6 flex flex-col">
+        
+        <div class="flex justify-center">
+            <span class="text-[10px] font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full uppercase tracking-wider">Bugün</span>
+        </div>
+
+        <div class="flex items-end gap-3 max-w-[85%] sm:max-w-[70%]">
+            <div class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mb-1">SO</div>
+            <div class="flex flex-col gap-1">
+                <div class="bg-white border border-blue-50 p-4 rounded-2xl rounded-bl-none shadow-sm text-sm text-slate-700 leading-relaxed">
+                    Merhaba! Bugün yaptığın egzersiz skorlarını inceledim. Diz açın %90'a ulaşmış, harika gidiyorsun! 👏
+                </div>
+                <span class="text-[10px] text-slate-400 ml-1">10:30</span>
+            </div>
+        </div>
+
+        <div class="flex items-end gap-3 max-w-[85%] sm:max-w-[70%] self-end flex-row-reverse">
+            <div class="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mb-1">YCD</div>
+            <div class="flex flex-col gap-1 items-end">
+                <div class="bg-blue-600 text-white p-4 rounded-2xl rounded-br-none shadow-md shadow-blue-200 text-sm leading-relaxed">
+                    Çok teşekkürler hocam. Hareketleri yaparken dizimin dış kısmında hafif bir gerilme hissediyorum, bu normal mi?
+                </div>
+                <span class="text-[10px] text-slate-400 mr-1">10:35 • Okundu</span>
+            </div>
+        </div>
+
+        <div class="flex items-end gap-3 max-w-[85%] sm:max-w-[70%]">
+            <div class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mb-1">SO</div>
+            <div class="flex flex-col gap-1">
+                <div class="bg-white border border-blue-50 p-4 rounded-2xl rounded-bl-none shadow-sm text-sm text-slate-700 leading-relaxed">
+                    Evet, kasların güçlendiği için bu çok normal. Gerilme hissettiğinde hareketi biraz daha yavaşlatabilirsin. 👍
+                </div>
+                <span class="text-[10px] text-slate-400 ml-1">10:40</span>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-blue-100 p-4 pb-6">
+        <div class="max-w-4xl mx-auto relative flex items-center gap-3">
+            
+            <button class="text-slate-400 hover:text-blue-600 transition p-2 rounded-full hover:bg-slate-50">
+                <i class="fas fa-paperclip"></i>
+            </button>
+
+            <div class="relative flex-1">
+                <input type="text" id="user-input" placeholder="Bir mesaj yazın..." 
+                    class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-full py-3.5 pl-5 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition shadow-inner">
+                <button class="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-blue-600 p-2">
+                    <i class="far fa-smile"></i>
+                </button>
+            </div>
+
+            <button onclick="sendMessage()" class="bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg shadow-blue-200 transition transform hover:scale-105 active:scale-95">
+                <i class="fas fa-paper-plane text-sm translate-x-px translate-y-px"></i>
+            </button>
+        </div>
+        <p class="text-center text-[10px] text-slate-400 mt-3">Ayna Terapisti güvenli mesajlaşma altyapısı ile korunmaktadır.</p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('user-input');
+            const chatWindow = document.getElementById('chat-window');
+
+            if (input.value.trim() !== "") {
+                const now = new Date();
+                const time = now.getHours().toString().padStart(2, '0') + ":" + now.getMinutes().toString().padStart(2, '0');
+
+                // Yeni Mesaj HTML Yapısı (Hasta - Sağ Taraf)
+                const msgHTML = `
+                <div class="flex items-end gap-3 max-w-[85%] sm:max-w-[70%] self-end flex-row-reverse animate-fade-in-up">
+                    <div class="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mb-1">YCD</div>
+                    <div class="flex flex-col gap-1 items-end">
+                        <div class="bg-blue-600 text-white p-4 rounded-2xl rounded-br-none shadow-md shadow-blue-200 text-sm leading-relaxed">
+                            ${input.value}
+                        </div>
+                        <span class="text-[10px] text-slate-400 mr-1">${time} • İletildi</span>
+                    </div>
+                </div>`;
+                
+                // HTML'i ekle (insertAdjacentHTML performansı daha iyidir)
+                chatWindow.insertAdjacentHTML('beforeend', msgHTML);
+                
+                input.value = "";
+                
+                // En aşağı kaydır
+                chatWindow.scrollTo({
+                    top: chatWindow.scrollHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Enter tuşu desteği
+        document.getElementById('user-input').addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        });
+
+        // Sayfa yüklendiğinde en alta kaydır
+        window.onload = function() {
+            const chatWindow = document.getElementById('chat-window');
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        };
+    </script>
+    
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.3s ease-out forwards;
+        }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayna Terapisti | Hoşgeldiniz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        /* Arka plan desenleri */
+        .bg-grid-blue-500 { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(59 130 246 / 0.08)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e"); }
+        .bg-dots-blue-300 { background-image: radial-gradient(rgb(147 197 253 / 0.5) 1px, transparent 1px); background-size: 20px 20px; }
+
+        /* Koyu mod için desen ayarları (Daha silik görünmesi için) */
+        .dark .bg-grid-blue-500 { stroke: rgb(59 130 246 / 0.05); }
+        .dark .bg-dots-blue-300 { background-image: radial-gradient(rgb(59 130 246 / 0.2) 1px, transparent 1px); }
+    </style>
+</head>
+<body class="bg-blue-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
+
+    <nav class="bg-blue-50/90 backdrop-blur-lg border-b border-blue-200 py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 supports-[backdrop-filter]:bg-blue-50/60 dark:bg-slate-900/80 dark:border-slate-800">
+        <div class="flex items-center gap-2 text-blue-700 font-black text-xl tracking-tight dark:text-blue-500">
+            <i class="fas fa-pulse animate-pulse"></i>
+            <span>Ayna Terapisti</span>
+        </div>
+        <div class="hidden md:flex items-center gap-6 text-slate-600 font-medium text-sm dark:text-slate-300">
+            <a href="hakkımızda.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Hakkımızda</a>
+            <a href="chat.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center gap-2">
+                <i class="far fa-comment-dots"></i> Terapistle İletişim
+            </a>
+            <a href="hastapanelı.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center gap-2">
+                <i class="fas fa-columns"></i> Hasta Paneli
+            </a>
+            
+            <div class="flex items-center gap-3 pl-4 border-l border-blue-200 dark:border-slate-700">
+                <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-semibold border border-blue-200 flex items-center gap-2 dark:bg-slate-800 dark:border-slate-700 dark:text-blue-400">
+                    <i class="fas fa-user-circle"></i>
+                    Yusuf Cemal DURMUŞ
+                </span>
+                
+                <button id="theme-toggle" class="w-10 h-10 rounded-full bg-white border border-blue-200 text-blue-600 flex items-center justify-center hover:bg-blue-50 transition dark:bg-slate-800 dark:border-slate-700 dark:text-yellow-400">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-24 px-4 text-center bg-gradient-to-b from-blue-100 via-blue-50 to-blue-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 relative overflow-hidden transition-colors duration-300">
+        <div class="absolute inset-0 bg-grid-blue-500 [mask-image:linear-gradient(0deg,rgba(255,255,255,0.8),rgba(255,255,255,0.5))] dark:[mask-image:linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.5))] -z-10"></div>
+        
+        <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold mb-8 border border-blue-200 uppercase tracking-wider shadow-sm dark:bg-slate-800 dark:text-blue-400 dark:border-slate-700">
+            <i class="fas fa-check-circle"></i> Tedavi Süreciniz Devam Ediyor
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-8 tracking-tight leading-tight dark:text-white">
+            Evde Fizik Tedavi <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">Artık Çok Daha Kolay</span>
+        </h1>
+        
+        <p class="max-w-2xl mx-auto text-slate-600 mb-12 leading-relaxed text-lg dark:text-slate-400">
+            Sayın Yusuf Cemal DURMUŞ, bugünkü egzersizleriniz hazır. Yapay zeka destekli analiz ile gelişiminizi sürdürün.
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-4 mb-20">
+            <a href="profılsayfası.html" class="bg-blue-700 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-800 shadow-xl shadow-blue-200/50 hover:shadow-blue-200 transition transform hover:-translate-y-1 flex items-center gap-2 dark:bg-blue-600 dark:hover:bg-blue-500 dark:shadow-none">
+                <i class="fas fa-user"></i> Profil'i Görüntüle
+            </a>
+            <a href="hastapanelı.html" class="bg-white text-blue-700 border border-blue-200 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition flex items-center gap-2 dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:hover:bg-slate-700">
+                <i class="fas fa-play"></i> Egzersizlere Başla
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto border-t border-blue-200 pt-12 dark:border-slate-800">
+            <div class="p-4">
+                <div class="text-4xl font-black text-blue-700 dark:text-blue-500">1500+</div>
+                <div class="text-slate-500 font-medium mt-1 uppercase text-xs tracking-widest dark:text-slate-400">Aktif Hasta</div>
+            </div>
+            <div class="p-4">
+                <div class="text-4xl font-black text-blue-700 dark:text-blue-500">200+</div>
+                <div class="text-slate-500 font-medium mt-1 uppercase text-xs tracking-widest dark:text-slate-400">Uzman Terapist</div>
+            </div>
+            <div class="p-4">
+                <div class="text-4xl font-black text-blue-700 dark:text-blue-500">%95</div>
+                <div class="text-slate-500 font-medium mt-1 uppercase text-xs tracking-widest dark:text-slate-400">Memnuniyet Oranı</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-indigo-50/50 relative border-y border-blue-100 dark:bg-slate-900 dark:border-slate-800 transition-colors duration-300">
+        <div class="absolute inset-0 bg-dots-blue-300 [mask-image:radial-gradient(ellipse_at_center,white,transparent)] dark:[mask-image:radial-gradient(ellipse_at_center,black,transparent)] -z-10"></div>
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4 dark:text-white">Panel Özellikleri</h2>
+                <p class="text-slate-600 max-w-xl mx-auto dark:text-slate-400">Size özel tanımlanan tedavi sürecini destekleyen teknolojiler.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 bg-white border border-blue-100 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group hover:border-blue-300 dark:bg-slate-800 dark:border-slate-700 dark:hover:border-blue-500">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 flex items-center justify-center rounded-xl mb-6 text-2xl group-hover:bg-blue-600 group-hover:text-white transition-colors dark:bg-slate-700 dark:text-blue-400">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-lg dark:text-white">Yapay Zeka Analizi</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed dark:text-slate-400">Kamera ile egzersiz formunuzu analiz eder ve anında bildirim verir.</p>
+                </div>
+                <div class="p-8 bg-white border border-blue-100 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group hover:border-purple-300 dark:bg-slate-800 dark:border-slate-700 dark:hover:border-purple-500">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 flex items-center justify-center rounded-xl mb-6 text-2xl group-hover:bg-purple-600 group-hover:text-white transition-colors dark:bg-slate-700 dark:text-purple-400">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-lg dark:text-white">Kişisel Egzersizler</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed dark:text-slate-400">Size özel hazırlanan egzersiz programlarını takip edin.</p>
+                </div>
+                <div class="p-8 bg-white border border-blue-100 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group hover:border-green-300 dark:bg-slate-800 dark:border-slate-700 dark:hover:border-green-500">
+                    <div class="w-14 h-14 bg-green-50 text-green-600 flex items-center justify-center rounded-xl mb-6 text-2xl group-hover:bg-green-600 group-hover:text-white transition-colors dark:bg-slate-700 dark:text-green-400">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-lg dark:text-white">İlerleme Takibi</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed dark:text-slate-400">Gelişiminizi detaylı grafik ve raporlarla görüntüleyin.</p>
+                </div>
+                <div class="p-8 bg-white border border-blue-100 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group hover:border-red-300 dark:bg-slate-800 dark:border-slate-700 dark:hover:border-red-500">
+                    <div class="w-14 h-14 bg-red-50 text-red-600 flex items-center justify-center rounded-xl mb-6 text-2xl group-hover:bg-red-600 group-hover:text-white transition-colors dark:bg-slate-700 dark:text-red-400">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-lg dark:text-white">Terapist İletişimi</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed dark:text-slate-400">Sorularınız için terapistinizle doğrudan iletişim kurun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-blue-50 relative overflow-hidden dark:bg-slate-950 transition-colors duration-300">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-200 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-30 dark:opacity-10"></div>
+
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 dark:text-white">Sistem Nasıl Çalışır?</h2>
+            <p class="text-slate-600 mb-16 text-lg dark:text-slate-400">Tedavi süreciniz üç basit adımda işler</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <div class="hidden md:block absolute top-24 left-1/4 right-1/4 h-0.5 bg-blue-200 -z-10 dark:bg-slate-800"></div>
+                
+                <div class="flex flex-col items-center group relative bg-blue-100/40 border border-blue-200 p-6 rounded-3xl hover:bg-white transition-all duration-300 dark:bg-slate-800/40 dark:border-slate-700 dark:hover:bg-slate-800">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-blue-200 mb-8 group-hover:scale-110 transition-transform dark:shadow-none">1</div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-3 dark:text-white">Programa Girin</h3>
+                    <p class="text-slate-600 px-2 leading-relaxed dark:text-slate-400">Hasta panelinizden günlük programınızı açın.</p>
+                </div>
+                <div class="flex flex-col items-center group relative bg-blue-100/40 border border-blue-200 p-6 rounded-3xl hover:bg-white transition-all duration-300 dark:bg-slate-800/40 dark:border-slate-700 dark:hover:bg-slate-800">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-purple-200 mb-8 group-hover:scale-110 transition-transform dark:shadow-none">2</div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-3 dark:text-white">Kamerayı Açın</h3>
+                    <p class="text-slate-600 px-2 leading-relaxed dark:text-slate-400">Yapay zeka asistanı hareketlerinizi izlemeye başlasın.</p>
+                </div>
+                <div class="flex flex-col items-center group relative bg-blue-100/40 border border-blue-200 p-6 rounded-3xl hover:bg-white transition-all duration-300 dark:bg-slate-800/40 dark:border-slate-700 dark:hover:bg-slate-800">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 text-white rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg shadow-green-200 mb-8 group-hover:scale-110 transition-transform dark:shadow-none">3</div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-3 dark:text-white">Raporlayın</h3>
+                    <p class="text-slate-600 px-2 leading-relaxed dark:text-slate-400">Egzersiz bitiminde verileriniz terapistinize iletilsin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gradient-to-tr from-blue-900 via-blue-800 to-indigo-900 text-white relative overflow-hidden dark:from-slate-900 dark:via-blue-950 dark:to-slate-900">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">Ayrıcalıklarınız</h2>
+                <p class="text-blue-100 dark:text-slate-400">Teknofest ödüllü altyapımız ile sağlığınız güvende</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:bg-white/10 transition hover:border-blue-400/50">
+                    <div class="bg-white/10 p-3 rounded-full"><i class="fas fa-home text-blue-200 text-xl"></i></div>
+                    <span class="font-semibold text-lg">Evden Konforlu Erişim</span>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:bg-white/10 transition hover:border-yellow-400/50">
+                    <div class="bg-white/10 p-3 rounded-full"><i class="fas fa-bolt text-yellow-300 text-xl"></i></div>
+                    <span class="font-semibold text-lg">Anlık Geri Bildirim</span>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:bg-white/10 transition hover:border-green-400/50">
+                    <div class="bg-white/10 p-3 rounded-full"><i class="fas fa-user-md text-green-300 text-xl"></i></div>
+                    <span class="font-semibold text-lg">7/24 Uzman Desteği</span>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:bg-white/10 transition hover:border-purple-400/50">
+                    <div class="bg-white/10 p-3 rounded-full"><i class="fas fa-file-alt text-purple-300 text-xl"></i></div>
+                    <span class="font-semibold text-lg">Detaylı Raporlar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-indigo-50/50 border-t border-blue-100 dark:bg-slate-900 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-100 via-indigo-50 to-blue-100 rounded-[3rem] p-12 text-center shadow-xl shadow-blue-200/50 border border-blue-200 relative overflow-hidden dark:from-slate-800 dark:via-slate-800 dark:to-slate-800 dark:border-slate-700 dark:shadow-none">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-400"></div>
+            
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 dark:text-white">Tedavinizi Aksatmayın</h2>
+            <p class="text-slate-600 mb-10 text-xl max-w-2xl mx-auto dark:text-slate-400">Günde sadece 15 dakika egzersiz yaparak iyileşme sürecinizi hızlandırabilirsiniz.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                 <a href="hastapanelı.html" class="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg hover:shadow-xl hover:shadow-blue-200/50 dark:shadow-none dark:bg-blue-600 dark:hover:bg-blue-500">
+                    Panele Git
+                </a>
+                 <a href="chat.html" class="bg-white/80 text-blue-700 border-2 border-blue-200 px-10 py-4 rounded-xl font-bold hover:bg-white transition dark:bg-slate-700 dark:border-slate-600 dark:text-blue-400 dark:hover:bg-slate-600">
+                    Terapiste Yaz
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-b from-slate-900 to-blue-950 text-slate-400 py-16 text-sm dark:from-slate-950 dark:to-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 text-white font-bold text-xl mb-6">
+                        <i class="fas fa-pulse text-blue-500 animate-pulse"></i>
+                        <span>Ayna Terapisti</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Yapay zeka destekli fizik terapi platformu.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-base">Menü</h4>
+                    <ul class="space-y-4">
+                        <li><a href="hastapanelı.html" class="hover:text-blue-400 transition">Hasta Paneli</a></li>
+                        <li><a href="profılsayfası.html" class="hover:text-blue-400 transition">Profilim</a></li>
+                        <li><a href="chat.html" class="hover:text-blue-400 transition">Mesajlar</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-base">Kurumsal</h4>
+                    <ul class="space-y-4">
+                        <li><a href="hakkımızda.html" class="hover:text-white transition">Hakkımızda</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Kariyer</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-base">Destek</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="hover:text-white transition">İletişim</a></li>
+                        <li><a href="#" class="hover:text-white transition">SSS</a></li>
+                        <li><a href="#" class="hover:text-white transition">Gizlilik</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2025 Ayna Terapisti. Tüm hakları saklıdır.</p>
+                <p class="mt-2 md:mt-0 text-slate-500">Bir <span class="text-blue-400 font-semibold">Teknofest</span> Projesidir.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // 1. Sayfa yüklendiğinde tercihi kontrol et
+        if (localStorage.getItem('theme') === 'dark' || 
+           (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // 2. Butona tıklandığında değiştir
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+
+</body>
+</html>

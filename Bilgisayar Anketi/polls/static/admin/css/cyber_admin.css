@@ -1,0 +1,277 @@
+/* CyberPoll Custom Admin Theme */
+
+/* Variables */
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --accent: #06b6d4;
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    
+    /* Django Admin Override Variables */
+    --header-color: #0f172a;
+    --header-bg: #1e1b4b;
+    --body-bg: #0f172a;
+    --body-quiet-color: #94a3b8;
+    --body-loud-color: #ffffff;
+    --header-link-color: #818cf8;
+    --breadcrumbs-bg: rgba(255, 255, 255, 0.05);
+    --breadcrumbs-link-fg: #818cf8;
+    --link-fg: #06b6d4;
+    --link-hover-color: #38bdf8;
+    --link-selected-fg: #ffffff;
+    --hairline-color: #334155;
+    --border-color: #334155;
+
+    --darkened-bg: #1e293b;
+    --selected-bg: rgba(99, 102, 241, 0.15);
+    --selected-row: rgba(99, 102, 241, 0.05);
+
+    --button-bg: #6366f1;
+    --button-hover-bg: #818cf8;
+    --default-button-bg: #06b6d4;
+    --default-button-hover-bg: #0891b2;
+    --close-button-bg: #475569;
+    --close-button-hover-bg: #334155;
+    --delete-button-bg: #ef4444;
+    --delete-button-hover-bg: #dc2626;
+
+    --object-tools-bg: #1e293b;
+    --object-tools-hover-bg: #334155;
+    
+    /* Animation Tokens */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles & Animations (Shared with Main Site) */
+.bg-gradient-animated {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(125deg, #0f172a 0%, #1e1b4b 25%, #0f172a 50%, #172554 75%, #0f172a 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    z-index: -2;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.orb {
+    position: fixed; border-radius: 50%; filter: blur(100px); 
+    opacity: 0.2; z-index: -1; pointer-events: none;
+}
+.orb-1 { width: 500px; height: 500px; background: #6366f1; top: -150px; right: -150px; animation: float1 10s ease-in-out infinite; }
+.orb-2 { width: 400px; height: 400px; background: #06b6d4; bottom: -100px; left: -100px; animation: float2 12s ease-in-out infinite; }
+.orb-3 { width: 300px; height: 300px; background: #8b5cf6; top: 40%; left: 30%; opacity: 0.15; }
+
+@keyframes float1 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-30px, 30px); } }
+@keyframes float2 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(20px, -20px); } }
+
+/* Global Styles */
+body {
+    background-color: var(--body-bg);
+    color: var(--body-loud-color);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+#header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 15px 40px;
+}
+
+#branding h1 {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#branding h1 a:link, #branding h1 a:visited {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.cyber-brand-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+#user-tools {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Breadcrumbs */
+div.breadcrumbs {
+    background: var(--breadcrumbs-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 40px;
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+}
+
+/* Dashboard Modules */
+.dashboard .module {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.dashboard .module table th {
+    background: rgba(0,0,0,0.2) !important;
+    font-weight: 600;
+}
+
+.dashboard .module caption {
+    background: linear-gradient(90deg, #1e293b, #334155);
+    padding: 12px 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.dashboard .module caption a.section:link, .dashboard .module caption a.section:visited {
+    color: var(--text-primary);
+}
+
+/* Forms & Inputs */
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="number"], filter-select, textarea, select {
+    background-color: #0f172a;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 6px;
+    padding: 8px 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+/* Buttons */
+.button, input[type="submit"], input[type="button"], .submit-row input, a.button {
+    background: var(--button-bg);
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+}
+
+.button.default, input[type="submit"].default, .submit-row input.default {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Tables */
+#changelist-form table, table.change-list {
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+#changelist-form th, table.change-list th {
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid var(--border-color);
+}
+
+tr.row1 { background: var(--bg-card); }
+tr.row2 { background: rgba(255,255,255,0.02); }
+
+/* Changelist Filter */
+#changelist-filter {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+#changelist-filter h2 {
+    background: linear-gradient(90deg, #1e293b, #334155);
+    border-radius: 12px 12px 0 0;
+}
+
+/* Login Page specifically */
+body.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login #container {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login #content {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    width: 100%;
+    max-width: 450px;
+}
+
+.login #header {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.login #branding h1 {
+    justify-content: center;
+    font-size: 2.2rem;
+}
+
+.login .submit-row {
+    padding: 0;
+    background: transparent;
+    border: none;
+    margin-top: 2rem;
+}
+
+.login .submit-row input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}

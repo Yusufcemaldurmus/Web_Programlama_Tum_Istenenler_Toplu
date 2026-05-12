@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayna Terapisti | Kayıt Ol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+
+        /* Arka plan desenleri */
+        .bg-grid-blue-500 { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(59 130 246 / 0.08)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e"); }
+    </style>
+</head>
+<body class="bg-blue-50 min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-10">
+
+    <div class="absolute inset-0 bg-grid-blue-500 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-300 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 opacity-20 -z-10"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-300 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 opacity-20 -z-10"></div>
+
+    <div class="bg-white/80 backdrop-blur-xl border border-blue-100 p-8 md:p-10 rounded-3xl shadow-2xl shadow-blue-100 max-w-lg w-full relative z-10">
+        
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center justify-center w-14 h-14 bg-blue-600 text-white rounded-2xl text-2xl mb-4 shadow-lg shadow-blue-200">
+                <i class="fas fa-user-plus"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-slate-900">Aramıza Katılın</h1>
+            <p class="text-slate-500 mt-2 text-sm">Fizik tedavi sürecinizi dijitalleştirin</p>
+        </div>
+
+        <form action="#" method="POST" class="space-y-5">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="name" class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Ad</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                            <i class="far fa-user text-slate-400"></i>
+                        </div>
+                        <input type="text" id="name" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block transition-all outline-none hover:bg-white" placeholder="Adınız" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="surname" class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Soyad</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                            <i class="far fa-user text-slate-400"></i>
+                        </div>
+                        <input type="text" id="surname" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block transition-all outline-none hover:bg-white" placeholder="Soyadınız" required>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">E-posta</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                        <i class="far fa-envelope text-slate-400"></i>
+                    </div>
+                    <input type="email" id="email" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block transition-all outline-none hover:bg-white" placeholder="ornek@email.com" required>
+                </div>
+            </div>
+
+            <div>
+                <label for="password" class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Şifre</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                        <i class="fas fa-lock text-slate-400"></i>
+                    </div>
+                    <input type="password" id="password" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block transition-all outline-none hover:bg-white" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <div>
+                <label for="password-confirm" class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Şifre (Tekrar)</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                        <i class="fas fa-check-circle text-slate-400"></i>
+                    </div>
+                    <input type="password" id="password-confirm" class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block transition-all outline-none hover:bg-white" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <a href="anasayfa.html" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-blue-200 transition-all transform hover:-translate-y-0.5 flex justify-center items-center gap-2 mt-6">
+                <span>Hesap Oluştur</span>
+                <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+
+        </form>
+
+        <div class="mt-8 text-center">
+            <p class="text-sm text-slate-600">
+                Zaten hesabınız var mı? 
+                <a href="giris.html" class="font-bold text-blue-600 hover:text-blue-800 transition">Giriş Yap</a>
+            </p>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 text-center">
+            <p class="text-xs text-slate-400">© 2025 Ayna Terapisti. Bir Teknofest Projesidir.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
